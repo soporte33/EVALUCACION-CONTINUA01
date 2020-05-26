@@ -1,0 +1,215 @@
+body{
+background: #333;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/*menu responsive*/
+header{
+width: 100%;
+height: 50px;
+background: #333;
+color: #fff;
+
+position: fixed;/*posicion para que se quede fijo*/
+top:  0;
+left: 0;
+z-index: 100;
+}
+
+#menu-bar{
+display: none;/*para ocultar el checkbox*/
+}
+
+header label{
+	float: right;
+	font: 28px;
+	margin: 6px 0;
+	cursor: pointer;/*para que aresca la manito*/
+	
+}
+
+.menu{
+position: absolute;
+top: 50px;
+left: 0;
+width: 100%;
+
+background: rgba(51,51,51,0.9);
+transition: all 0.5s;
+transform: translate(-100%);
+}
+
+.menu a{
+	display: block;
+	color: #fff;
+	height: 50px;
+	text-decoration: none;
+	padding: 15px;
+	border-bottom: 1px solid rgba(255,255,255,0.5)
+}
+
+.menu a:hover{
+	background: rgba(255,255,255,0.3);
+}
+
+#menu-bar:checked ~ .menu{
+transform: translate(0%);
+}
+
+h1{float: left;}
+
+header .contenedor{
+	display: table;
+}
+
+.contenedor{
+	width: 90%;
+	margin: auto;
+}
+/*fin menu responsive*/
+
+
+
+/*menu responsive*/
+@media(min-width: 1000px){
+.menu{
+	position: static;
+	width: auto;
+	height: auto;
+	transform: translate(0%);
+	float: right;
+	display: flex;
+}
+
+.menu a{
+	border: none;
+}
+
+header label{
+	display: none;
+}
+
+}
+/*fin de menu resposive*/
+
+/*contenido del body*/
+
+/*ancla*/
+#inicio{
+width: 100%;
+height: 95vh;
+background: #FFFFCC;
+}
+
+#nosotros{
+width: 100%;
+height: 100vh;
+background: #FFFF99;
+
+}
+#servicios{
+width: 100%;
+height: 100vh;
+background: #FFFF99;
+}
+
+#contactenos{
+width: 100%;
+height: 60vh;
+background: yellow;
+}
+
+#productos{
+width: 100%;
+height: 80vh;
+background: #CCCCCC;
+}
+/*fin ancla*/
+
+/*cerar un aclase ar tamaño color texto 
+h2{
+	color: white,
+	font-size: 40px;
+	text-align: center;
+}
+
+p{
+	color: yellow,
+	font-size: 20px;
+	padding: 20px;
+	text-align: justify;
+}*/
+
+.slider  {
+	width: 100%;
+	margin: auto;
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+
+	animation: cambio 20s infinite alternate;
+	animation-timing-function: ease-in;
+	
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+.slider img{
+	width: 100%;
+}
+@keyframes cambio{
+	0%{margin-left: 0;}
+	20%{margin-left: 0;}
+
+
+	25%{margin-left: -100%;}
+	45%{margin-left: -100%;}
+
+	50%{margin-left: -200%;}
+	70%{margin-left: -200%;}
+
+	75%{margin-left: -300%;}
+	100%{margin-left: -300%;}
+}
+
+p {
+  font: 200% sans-serif;
+}
+
+h2 {
+  font: oblique bold 300% cursive;
+
+
+}
+
+td {
+  font: 200% sans-serif;
+}
+
+h3 {
+  font: oblique bold 300% cursive;
+
+  
+}
+
+#aside_barralateral_isquierda{
+    background-color: #0f0;
+    float:none;/*para que este ala izquierda ocupando el ancho del texto*/
+    height: 600px;
+    
+}
+#aside_barralateral_derecha{
+    background-color: #0f0;
+    float:none;/*para que este ala izquierda ocupando el ancho del texto*/
+    height: 600px;
+}
